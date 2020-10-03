@@ -8,5 +8,9 @@ import retrofit2.http.Query
 
 interface NewsService {
     @GET("top-headlines?category=technology")
-    fun retrieveNews(@Query("country") country: String): Single<Response<NewsResponse>>
+    fun retrieveNews(
+        @Query("country") country: String,
+        @Query("page") page: Int,
+        @Query("pageSize") pageSize: Int,
+    ): Single<Response<NewsResponse>>
 }

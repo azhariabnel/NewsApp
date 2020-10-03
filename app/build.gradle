@@ -61,6 +61,8 @@ dependencies {
     implementation "com.google.android.material:material:1.2.1"
     //recyclerview
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    //swiperefresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"

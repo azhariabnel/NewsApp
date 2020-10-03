@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">NewsApp</string>
     <string name="splash_text">Welcome To \nTech News App</string>
+    <string name="desc_lorem_ipsum">Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="title_example">Besser als Aldi Talk? Edeka startet neuen Jahrestarif für unter 60 Euro</string>
+    <string name="content_desc_image_article">image of article</string>
+    <string name="msg_no_connection">No Internet connection found.\n Check your connection or try again</string>
+    <string name="label_no_connection">Whoops!</string>
+    <string name="text_retry_connection_btn">retry</string>
+    <string name="desc_image_no_connectivity">no connectivity image</string>
+    <string name="desc_image_logo">image logo</string>
+    <string name="desc_image_arrow_back">image arrow back</string>
+    <string name="msg_no_data_toshow">There\'s no item to show</string>
+    <string name="holder_toolbar_title">Title</string>
 </resources>
