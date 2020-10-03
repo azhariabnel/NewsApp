@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".view.activity.NewsDetailActivity"></activity>
         <activity android:name=".view.activity.NewsListActivity" />
-        <activity android:name=".view.activity.SplashActivity">
+        <activity android:name=".view.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

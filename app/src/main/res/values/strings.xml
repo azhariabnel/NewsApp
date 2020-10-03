@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="splash_text">Welcome To \nTech News App</string>
 </resources>
