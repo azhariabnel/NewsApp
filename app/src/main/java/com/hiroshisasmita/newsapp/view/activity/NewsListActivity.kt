@@ -66,7 +66,7 @@ class NewsListActivity : BaseActivity() {
 
     private fun scrollAfterLoadMore() {
         recyclerView.post {
-            recyclerView.smoothScrollToPosition(adapter.itemCount - (NewsRepository.pageSize))
+            recyclerView.smoothScrollToPosition(adapter.itemCount - (NewsRepository.pageSize - 1))
         }
     }
 
