@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countryCode">
+        <item>id</item>
+        <item>au</item>
+        <item>sg</item>
+        <item>us</item>
+        <item>gb</item>
+    </string-array>
+
+    <string-array name="countryName">
+        <item>Indonesia</item>
+        <item>Australia</item>
+        <item>Singapore</item>
+        <item>United State</item>
+        <item>United Kingdom</item>
+    </string-array>
+
+    <integer-array name="countryFlag">
+        <item>@drawable/ic_id</item>
+        <item>@drawable/ic_au</item>
+        <item>@drawable/ic_sg</item>
+        <item>@drawable/ic_us</item>
+        <item>@drawable/ic_gb</item>
+    </integer-array>
+</resources>

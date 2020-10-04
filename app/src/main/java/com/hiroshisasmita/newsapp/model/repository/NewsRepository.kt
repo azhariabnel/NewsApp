@@ -1,13 +1,15 @@
 package com.hiroshisasmita.newsapp.model.repository
 
+import android.content.SharedPreferences
 import com.hiroshisasmita.newsapp.model.base.BaseRepository
 import com.hiroshisasmita.newsapp.model.response.NewsResponse
 import com.hiroshisasmita.newsapp.model.retrofit.NewsService
+import com.hiroshisasmita.newsapp.util.Const
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
-class NewsRepository @Inject constructor(service: NewsService) : BaseRepository(service) {
+class NewsRepository @Inject constructor(service: NewsService, preferences: SharedPreferences) : BaseRepository(service, preferences) {
     companion object {
         const val pageSize = 5
     }
@@ -15,7 +17,7 @@ class NewsRepository @Inject constructor(service: NewsService) : BaseRepository(
     fun retrieveNews(page: Int): Single<NewsResponse> {
         return validateServiceCall(
             service.retrieveNews(
-                "id",
+                preferences.getString(Const.COUNTRY_PREFERENCE, "id")?:"id",
                 page,
                 pageSize
             )

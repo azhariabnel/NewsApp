@@ -1,7 +1,6 @@
 package com.hiroshisasmita.newsapp.model.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.LayoutRes
@@ -18,16 +17,27 @@ abstract class BaseActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(providesLayout())
-        setBackButtonClickListener()
+        setToolbarComponentClick()
         setSupportBackButton(false)
+        setSupportSelectCountry(false)
         onViewCreated()
     }
 
-    private fun setBackButtonClickListener() {
+    protected fun setSupportSelectCountry(isSupportSelectCountry: Boolean) {
+        selectCountry.visibility = if (isSupportSelectCountry) View.VISIBLE else View.GONE
+    }
+
+    private fun setToolbarComponentClick() {
         toolbarBackButton.setOnClickListener {
-            onBackPressed()
+            onClickToolbarComponent(it)
+        }
+
+        selectCountry.setOnClickListener {
+            onClickToolbarComponent(it)
         }
     }
+
+    protected open fun onClickToolbarComponent(view: View){}
 
     protected fun setSupportBackButton(isEnable: Boolean){
         toolbarBackButton.visibility = if (isEnable) View.VISIBLE else View.GONE

@@ -3,6 +3,7 @@ package com.hiroshisasmita.newsapp.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.hiroshisasmita.newsapp.R
 import com.hiroshisasmita.newsapp.model.Article
 import com.hiroshisasmita.newsapp.model.base.BaseActivity
@@ -42,5 +43,11 @@ class NewsDetailActivity : BaseActivity() {
 
     private fun getExtra(intent: Intent?) {
         article = intent?.getParcelableExtra(Const.ARTICLE_EXTRA)
+    }
+
+    override fun onClickToolbarComponent(view: View) {
+        when (view.id){
+            R.id.toolbarBackButton -> onBackPressed()
+        }
     }
 }

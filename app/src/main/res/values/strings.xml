@@ -21,4 +21,7 @@
     <string name="holder_article_content">Toko apel. (Pixabay / matcuz)Hitekno.com – Meski peluncuran resminya belum diselenggarakan iPhone 12, penggemarnya bersemangat dengan mengungkap rumor Spesifikasi iPhone 13 dan iPhone 13 SE.r\nRumor t… [+2777 chars]</string>
     <string name="label_original_source">Original Source</string>
     <string name="holder_source_url">https://bolamadura.com/belum-dirilis-banyak-rumor-yang-membeberkan-spesifikasi-iphone-13-dan-iphone-13-se/</string>
+    <string name="desc_image_country_flag">country flag</string>
+    <string name="desc_image_drop_down">drop down image</string>
+    <string name="label_choose_country">Choose Country</string>
 </resources>

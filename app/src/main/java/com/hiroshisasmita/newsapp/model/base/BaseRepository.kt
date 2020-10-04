@@ -1,11 +1,12 @@
 package com.hiroshisasmita.newsapp.model.base
 
+import android.content.SharedPreferences
 import com.hiroshisasmita.newsapp.model.retrofit.NewsService
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
 import java.lang.Exception
 
-abstract class BaseRepository(protected val service: NewsService) {
+abstract class BaseRepository(protected val service: NewsService, protected val preferences: SharedPreferences) {
 
     protected open fun <T> validateServiceCall(single: Single<Response<T>>): Single<T> {
         return single.flatMap {
