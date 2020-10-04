@@ -1,15 +1,24 @@
 <resources>
     <string name="app_name">NewsApp</string>
     <string name="splash_text">Welcome To \nTech News App</string>
-    <string name="desc_lorem_ipsum">Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
-    <string name="title_example">Besser als Aldi Talk? Edeka startet neuen Jahrestarif für unter 60 Euro</string>
-    <string name="content_desc_image_article">image of article</string>
     <string name="msg_no_connection">No Internet connection found.\n Check your connection or try again</string>
+    <string name="msg_no_data_toshow">There\'s no item to show</string>
     <string name="label_no_connection">Whoops!</string>
     <string name="text_retry_connection_btn">retry</string>
+    <string name="desc_image_content_article">image of article</string>
     <string name="desc_image_no_connectivity">no connectivity image</string>
     <string name="desc_image_logo">image logo</string>
     <string name="desc_image_arrow_back">image arrow back</string>
-    <string name="msg_no_data_toshow">There\'s no item to show</string>
     <string name="holder_toolbar_title">Title</string>
+    <string name="holder_desc_article">Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="holder_article_title">Belum dirilis, banyak rumor yang membeberkan spesifikasi iPhone 13 dan iPhone 13 SE - Bolamadura.com</string>
+    <string name="holder_publish_time">Wed, 20 Juli 2020, 08:35 AM</string>
+    <string name="label_author">Author</string>
+    <string name="holder_author">Suede Nazar</string>
+    <string name="holder_article_desc">Toko apel. (Pixabay / matcuz) Hitekno.com - Meski peluncuran resminya belum diselenggarakan iPhone 12, penggemarnya bersemangat dengan mengungkap rumor</string>
+    <string name="label_description">Description</string>
+    <string name="label_content">Content</string>
+    <string name="holder_article_content">Toko apel. (Pixabay / matcuz)Hitekno.com – Meski peluncuran resminya belum diselenggarakan iPhone 12, penggemarnya bersemangat dengan mengungkap rumor Spesifikasi iPhone 13 dan iPhone 13 SE.r\nRumor t… [+2777 chars]</string>
+    <string name="label_original_source">Original Source</string>
+    <string name="holder_source_url">https://bolamadura.com/belum-dirilis-banyak-rumor-yang-membeberkan-spesifikasi-iphone-13-dan-iphone-13-se/</string>
 </resources>

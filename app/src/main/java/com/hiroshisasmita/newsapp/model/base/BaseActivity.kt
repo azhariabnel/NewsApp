@@ -18,8 +18,15 @@ abstract class BaseActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(providesLayout())
+        setBackButtonClickListener()
         setSupportBackButton(false)
         onViewCreated()
+    }
+
+    private fun setBackButtonClickListener() {
+        toolbarBackButton.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     protected fun setSupportBackButton(isEnable: Boolean){
@@ -31,7 +38,7 @@ abstract class BaseActivity: AppCompatActivity() {
 
     protected abstract fun onViewCreated()
 
-    protected abstract fun onNoInternetRetryCallback(): () -> Unit
+    protected abstract fun onNoInternetRetryCallback(): (() -> Unit)?
 
     protected fun showError(throwable: Throwable){
         if (throwable is NoConnectivityException){

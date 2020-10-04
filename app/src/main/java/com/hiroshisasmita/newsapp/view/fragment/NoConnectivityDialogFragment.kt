@@ -8,7 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.hiroshisasmita.newsapp.R
 import kotlinx.android.synthetic.main.fragment_dialog_no_connectivity.*
 
-class NoConnectivityDialogFragment(private val onRetryCallback: () -> Unit): DialogFragment() {
+class NoConnectivityDialogFragment(private val onRetryCallback: (() -> Unit)?): DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class NoConnectivityDialogFragment(private val onRetryCallback: () -> Unit): Dia
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnRetry.setOnClickListener {
-            onRetryCallback.invoke()
+            onRetryCallback?.invoke()
             dismiss()
         }
     }

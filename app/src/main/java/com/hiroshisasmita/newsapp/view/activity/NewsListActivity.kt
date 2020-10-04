@@ -1,13 +1,13 @@
 package com.hiroshisasmita.newsapp.view.activity
 
+import android.content.Intent
 import android.view.View
-import android.widget.Toast
 import com.hiroshisasmita.newsapp.R
 import com.hiroshisasmita.newsapp.model.Article
 import com.hiroshisasmita.newsapp.model.base.BaseActivity
 import com.hiroshisasmita.newsapp.model.base.BaseRecyclerViewPagingAdapter.PagingAdapterListener
-import com.hiroshisasmita.newsapp.model.base.BaseRepository
 import com.hiroshisasmita.newsapp.model.repository.NewsRepository
+import com.hiroshisasmita.newsapp.util.Const
 import com.hiroshisasmita.newsapp.view.adapter.NewsListAdapter
 import com.hiroshisasmita.newsapp.viewmodel.NewsListViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -80,14 +80,20 @@ class NewsListActivity : BaseActivity() {
                 }
 
                 override fun onItemClick(item: Article) {
-                    Toast.makeText(baseContext, item.title, Toast.LENGTH_SHORT)
-                        .show()
+                    showDetail(item)
                 }
 
                 override fun onStateLoadingChange(isLoading: Boolean) {
                     setLoadingVisibility(isLoading)
                 }
             }
+        }
+    }
+
+    private fun showDetail(item: Article) {
+        Intent(this, NewsDetailActivity::class.java).apply {
+            putExtra(Const.ARTICLE_EXTRA, item)
+            startActivity(this)
         }
     }
 
