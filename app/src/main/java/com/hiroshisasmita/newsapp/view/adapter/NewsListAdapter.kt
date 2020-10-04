@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hiroshisasmita.newsapp.R
 import com.hiroshisasmita.newsapp.model.Article
 import com.hiroshisasmita.newsapp.model.base.BaseRecyclerViewPagingAdapter
+import com.hiroshisasmita.newsapp.util.DateParser
 import com.hiroshisasmita.newsapp.util.extention.getProgressDrawable
 import com.hiroshisasmita.newsapp.util.extention.loadImage
 import kotlinx.android.synthetic.main.item_news.view.*
@@ -21,7 +22,8 @@ class NewsListAdapter: BaseRecyclerViewPagingAdapter<Article, RecyclerView.ViewH
         holder.itemView.imageView.loadImage(item.urlToImage, getProgressDrawable(mContext))
         holder.itemView.itemTitle.text = item.title
         holder.itemView.itemCategory.text = "Technology"
-        holder.itemView.itemPublishTime.text = item.publishedAt
+        if (item.publishedAt != null)
+            holder.itemView.itemPublishTime.text = DateParser.convertDate(item.publishedAt)
 
         holder.itemView.setOnClickListener {
             notifyItemClicked(item)

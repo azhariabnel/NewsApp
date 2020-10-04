@@ -1,13 +1,12 @@
 package com.hiroshisasmita.newsapp.view.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.View
 import com.hiroshisasmita.newsapp.R
 import com.hiroshisasmita.newsapp.model.Article
 import com.hiroshisasmita.newsapp.model.base.BaseActivity
 import com.hiroshisasmita.newsapp.util.Const
+import com.hiroshisasmita.newsapp.util.DateParser
 import com.hiroshisasmita.newsapp.util.extention.getProgressDrawable
 import com.hiroshisasmita.newsapp.util.extention.loadImage
 import kotlinx.android.synthetic.main.activity_news_detail.*
@@ -34,7 +33,7 @@ class NewsDetailActivity : BaseActivity() {
     private fun setView() {
         articleImage.loadImage(article?.urlToImage, getProgressDrawable(this))
         articleTitle.text = article?.title
-        articlePublishTime.text = article?.publishedAt
+        if (article?.publishedAt != null) articlePublishTime.text = DateParser.convertDate(article!!.publishedAt!!)
         articleAuthor.text = article?.author
         articleDescription.text = article?.description
         articleContent.text = article?.content
