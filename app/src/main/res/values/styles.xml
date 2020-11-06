@@ -1,18 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorBlue</item>
     </style>
 
     <style name="SplashTheme" parent="AppTheme">
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="p">shortEdges</item>
     </style>
 
-    <style name="BlackButton" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@android:color/black</item>
+    <style name="ButtonBackground" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorGrey</item>
     </style>
 
 </resources>

@@ -2,25 +2,25 @@
 <resources>
     <string-array name="countryCode">
         <item>id</item>
-        <item>au</item>
-        <item>sg</item>
+        <item>jp</item>
+        <item>my</item>
         <item>us</item>
-        <item>gb</item>
+        <item>kr</item>
     </string-array>
 
     <string-array name="countryName">
         <item>Indonesia</item>
-        <item>Australia</item>
-        <item>Singapore</item>
-        <item>United State</item>
-        <item>United Kingdom</item>
+        <item>Japan</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>South Korea</item>
     </string-array>
 
     <integer-array name="countryFlag">
         <item>@drawable/ic_id</item>
-        <item>@drawable/ic_au</item>
-        <item>@drawable/ic_sg</item>
+        <item>@drawable/ic_jp</item>
+        <item>@drawable/ic_my</item>
         <item>@drawable/ic_us</item>
-        <item>@drawable/ic_gb</item>
+        <item>@drawable/ic_sk</item>
     </integer-array>
 </resources>
